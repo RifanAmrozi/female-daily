@@ -15,9 +15,27 @@
 		408BC0EC2E2F1FD700DDFA90 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0447D8382E2F3D5700FEA895 /* Exceptions for "female-daily" folder in "female-daily" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 408BC0402E2DE16700DDFA90 /* female-daily */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		0447D83B2E2F418600FEA895 /* Font-Asset */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Font-Asset";
+			sourceTree = "<group>";
+		};
 		408BC0432E2DE16700DDFA90 /* female-daily */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0447D8382E2F3D5700FEA895 /* Exceptions for "female-daily" folder in "female-daily" target */,
+			);
 			path = "female-daily";
 			sourceTree = "<group>";
 		};
@@ -38,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				408BC0EC2E2F1FD700DDFA90 /* .gitignore */,
+				0447D83B2E2F418600FEA895 /* Font-Asset */,
 				408BC0432E2DE16700DDFA90 /* female-daily */,
 				408BC0422E2DE16700DDFA90 /* Products */,
 			);
@@ -67,6 +86,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				0447D83B2E2F418600FEA895 /* Font-Asset */,
 				408BC0432E2DE16700DDFA90 /* female-daily */,
 			);
 			name = "female-daily";
@@ -263,11 +283,13 @@
 				DEVELOPMENT_TEAM = XFZH4MQVN2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "female-daily/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -291,11 +313,13 @@
 				DEVELOPMENT_TEAM = XFZH4MQVN2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "female-daily/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
