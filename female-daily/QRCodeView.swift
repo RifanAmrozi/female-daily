@@ -6,11 +6,7 @@ struct QRCodeView: View {
     @StateObject private var viewModel = QRCodeViewModel()
 
     var body: some View {
-        VStack(spacing: 20) {
-            Text("Tiket QR")
-                .font(.title2)
-                .bold()
-
+        VStack(alignment: .center) {
             Text("GOLD – VIP MKT Partner")
                 .foregroundColor(.red)
                 .font(.headline)

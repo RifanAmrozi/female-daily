@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct EventMenuView: View {
-    @State private var selectedTab: String = "pesantiket"
+    @State private var selectedTab: String = "tiketsaya"
     @Namespace private var underlineAnimation
+    var title: String {
+        switch selectedTab {
+        case "tiketsaya":
+            return "Tiket Saya"
+        case "tiketqr":
+            return "Tiket QR"
+        default:
+            return "Pesan Tiket"
+        }
+    }
     
     var body: some View {
         VStack(spacing:0) {
@@ -18,7 +28,7 @@ struct EventMenuView: View {
                 Image(systemName: "arrow.left")
                 Spacer()
                 // Alternative Views and Spacers
-                Text("Pesan Tiket")
+                Text(title)
                     .font(
                         Font.custom("Inter", size: 20)
                             .weight(.semibold)
@@ -26,6 +36,7 @@ struct EventMenuView: View {
                     .multilineTextAlignment(.center)
                     .foregroundColor(Constants.GreyscaleGrey950)
                     .frame(width: 121, alignment: .top)
+                Spacer()
             }
             .padding(.horizontal, 24)
             .padding(.vertical, 16)
@@ -74,7 +85,7 @@ struct EventMenuView: View {
                     }
                 }
                 .frame(maxWidth: .infinity, minHeight: 48)
-
+                
                 HStack {
                     if selectedTab == "tiketsaya" {
                         Spacer()
@@ -91,18 +102,23 @@ struct EventMenuView: View {
             }
             
             ScrollView {
-                VStack(alignment: .leading, spacing: 16) {
+                VStack(spacing: 16) {
                     if selectedTab == "pesantiket" {
-                        pesantiketcardview(eventname: "Jakarta X Beauty 2025", eventdate: "01 - 03 Agustus 2025", eventlocation: "Jakarta Convention Center", eventprice: "Rp. 10.000")
-                        pesantiketcardview(eventname: "Surabaya X Beauty 2025", eventdate: "01 - 03 Desember 2025", eventlocation: "Surabaya Convention Center", eventprice: "Rp. 7.000")
-                        pesantiketcardview(eventname: "Bandung X Beauty 2025", eventdate: "05 - 07 Desember 2025", eventlocation: "Bandung Convention Center", eventprice: "Rp. 20.000")
+                        PesanTiketCardView(eventname: "Jakarta X Beauty 2025", eventdate: "01 - 03 Agustus 2025", eventlocation: "Jakarta Convention Center", eventprice: "Rp. 10.000")
+                        PesanTiketCardView(eventname: "Surabaya X Beauty 2025", eventdate: "01 - 03 Desember 2025", eventlocation: "Surabaya Convention Center", eventprice: "Rp. 7.000")
+                        PesanTiketCardView(eventname: "Bandung X Beauty 2025", eventdate: "05 - 07 Desember 2025", eventlocation: "Bandung Convention Center", eventprice: "Rp. 20.000")
                     } else if selectedTab == "tiketsaya" {
-                        Text("Belum ada tiket") // Ganti dengan tampilan tiketmu
-                            .padding()
+                        let models = TiketModel.getDummyData()
+
+                        ForEach(Array(models.enumerated()), id: \.element.id) { index, tiket in
+                            TiketSayaView(data: tiket, row: index + 1, selectedTab: $selectedTab)
+                        }
+                    } else if selectedTab == "tiketqr" {
+                        QRCodeView(qrString: "142352")
                     }
                 }
                 .padding(24)
-                .frame(maxWidth: .infinity, minHeight: 695, alignment: .topLeading)
+                .frame(maxWidth: .infinity, minHeight: 695)
             }
         }
     }

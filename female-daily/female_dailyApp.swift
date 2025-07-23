@@ -25,7 +25,7 @@ struct female_dailyApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            EventMenuView()
         }
         .modelContainer(sharedModelContainer)
     }
