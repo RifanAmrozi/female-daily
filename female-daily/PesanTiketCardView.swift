@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct pesantiketcardview: View {
+struct PesanTiketCardView: View {
     let eventname: String
     let eventdate: String
     let eventlocation: String
@@ -86,15 +86,8 @@ struct pesantiketcardview: View {
     
 }
 
-struct Constants {
-    static let GreyscaleGrey950: Color = Color(red: 0.14, green: 0.15, blue: 0.16)
-    static let BackgroundColor: Color = Color(red: 1, green: 1, blue: 1)
-    static let GreyscaleGrey600: Color = Color(red: 0.34, green: 0.36, blue: 0.39)
-    static let PrimaryAccentPrimary600: Color = Color(red: 0.86, green: 0.15, blue: 0.47)
-}
-
 #Preview {
-    pesantiketcardview(eventname: "Jakarta X Beauty 2025", eventdate: "01 - 03 Agustus 2025", eventlocation: "Jakarta Convention Center", eventprice: "Rp. 10.000")
+    PesanTiketCardView(eventname: "Jakarta X Beauty 2025", eventdate: "01 - 03 Agustus 2025", eventlocation: "Jakarta Convention Center", eventprice: "Rp. 10.000")
         .padding()
         .background(.red)
 }
