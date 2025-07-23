@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct pesantiketcardview: View {
+    let eventname: String
+    let eventdate: String
+    let eventlocation: String
+    let eventprice: String
+    
     var body: some View {
             VStack(alignment: .leading, spacing: 0) {
                 Rectangle()
@@ -24,7 +29,7 @@ struct pesantiketcardview: View {
                 
                 VStack(alignment: .leading, spacing: 4) {
                     // Title 2
-                    Text("Jakarta X Beauty 2025")
+                    Text(eventname)
                         .font(
                             Font.custom("Montserrat", size: 20)
                                 .weight(.bold)
@@ -36,7 +41,7 @@ struct pesantiketcardview: View {
                         Image(systemName: "calendar")
                             .frame(width: 18, height: 18)
                         // Normal
-                        Text("01 - 03 Agustus 2025")
+                        Text(eventdate)
                             .font(Font.custom("Montserrat", size: 15))
                             .foregroundColor(Constants.GreyscaleGrey950)
                     }
@@ -45,7 +50,7 @@ struct pesantiketcardview: View {
                         Image(systemName: "map")
                             .frame(width: 18, height: 18)
                         // Normal
-                        Text("Jakarta Convention Center")
+                        Text(eventlocation)
                             .font(Font.custom("Montserrat", size: 15))
                             .foregroundColor(Constants.GreyscaleGrey950)
                     }
@@ -59,7 +64,7 @@ struct pesantiketcardview: View {
                             )
                             .foregroundColor(Constants.GreyscaleGrey600)
                         
-                        Text("Rp. 10.000")
+                        Text(eventprice)
                             .font(
                                 Font.custom("Montserrat", size: 15)
                                     .weight(.semibold)
@@ -89,7 +94,7 @@ struct Constants {
 }
 
 #Preview {
-    pesantiketcardview()
+    pesantiketcardview(eventname: "Jakarta X Beauty 2025", eventdate: "01 - 03 Agustus 2025", eventlocation: "Jakarta Convention Center", eventprice: "Rp. 10.000")
         .padding()
         .background(.red)
 }
