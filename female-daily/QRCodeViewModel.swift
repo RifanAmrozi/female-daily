@@ -9,7 +9,7 @@ class QRCodeViewModel: ObservableObject {
     @Published var errorMessage: String?
 
     func generateQRCode(for data: String) {
-        guard let url = URL(string: "http://localhost:8080/api/v1/qr/generate") else { return }
+        guard let url = URL(string: "http://10.60.59.97:8080/api/v1/qr/generate") else { return }
 
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
