@@ -4,42 +4,65 @@ import CoreImage.CIFilterBuiltins
 struct QRCodeView: View {
     let qrString: String
     @StateObject private var viewModel = QRCodeViewModel()
+    @Binding var selectedTab: String
+    @State private var showModal = false
 
     var body: some View {
-        VStack(alignment: .center) {
-            Text("GOLD – VIP MKT Partner")
-                .foregroundColor(.red)
-                .font(.headline)
-
-            if viewModel.isLoading {
-                ProgressView()
-            } else if let image = viewModel.image {
-                Image(uiImage: image)
-                    .resizable()
-                    .interpolation(.none)
-                    .frame(width: 200, height: 200)
-            } else if let error = viewModel.errorMessage {
-                Text("❌ \(error)")
-                    .foregroundColor(.red)
+        ZStack {
+            if showModal {
+                Color.black.opacity(0.8)
+                    .ignoresSafeArea()
+                    .onTapGesture {
+                        showModal = false
+                    }
+                
+                CustomModalView(selectedTab: $selectedTab) {
+                    showModal = false
+                    selectedTab = "tiketsaya"
+                }
+                .transition(.scale)
+                .zIndex(1)
             } else {
-                Text("QR belum dibuat")
+                VStack(alignment: .center) {
+                    Text("GOLD – VIP MKT Partner")
+                        .foregroundColor(.red)
+                        .font(.headline)
+                    
+                    if viewModel.isLoading {
+                        ProgressView()
+                    } else if let image = viewModel.image {
+                            Image(uiImage: image)
+                                .resizable()
+                                .interpolation(.none)
+                                .frame(width: 300, height: 300)
+                                .onTapGesture {
+                                    showModal = true
+                                }
+                    } else if let error = viewModel.errorMessage {
+                        Text("❌ \(error)")
+                            .foregroundColor(.red)
+                    } else {
+                        Text("QR belum dibuat")
+                    }
+                    
+                    VStack {
+                        Text("ID Ticket")
+                            .font(.caption)
+                            .foregroundColor(.red)
+                        Text(qrString)
+                            .font(.footnote)
+                            .bold()
+                    }
+                    
+                    Spacer()
+                }
+                .padding()
+                .onAppear {
+                    viewModel.generateQRCode(for: qrString)
+                }
             }
-
-            VStack {
-                Text("ID Ticket")
-                    .font(.caption)
-                    .foregroundColor(.red)
-                Text(qrString)
-                    .font(.footnote)
-                    .bold()
-            }
-
-            Spacer()
         }
-        .padding()
-        .onAppear {
-            viewModel.generateQRCode(for: qrString)
-        }
+        .animation(.easeInOut, value: showModal)
     }
 }
 
