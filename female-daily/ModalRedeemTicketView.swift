@@ -62,17 +62,3 @@ struct CustomModalView: View {
         .frame(width: 300)
     }
 }
-
-struct ModalRedeemTicketView: View {
-    @State private var showModal = false
-    
-    var body: some View {
-        
-    }
-}
-
-
-
-#Preview {
-    ModalRedeemTicketView()
-}
