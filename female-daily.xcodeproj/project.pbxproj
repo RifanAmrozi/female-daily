@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		408BC0ED2E2F1FD700DDFA90 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 408BC0EC2E2F1FD700DDFA90 /* .gitignore */; };
+		408BC26E2E31E66800DDFA90 /* MissionMapScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408BC26D2E31E66800DDFA90 /* MissionMapScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		408BC0412E2DE16700DDFA90 /* female-daily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "female-daily.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		408BC0EC2E2F1FD700DDFA90 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		408BC26D2E31E66800DDFA90 /* MissionMapScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionMapScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -55,6 +57,7 @@
 		408BC0382E2DE16700DDFA90 = {
 			isa = PBXGroup;
 			children = (
+				408BC26D2E31E66800DDFA90 /* MissionMapScene.swift */,
 				408BC0EC2E2F1FD700DDFA90 /* .gitignore */,
 				0447D83B2E2F418600FEA895 /* Font-Asset */,
 				408BC0432E2DE16700DDFA90 /* female-daily */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				408BC26E2E31E66800DDFA90 /* MissionMapScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

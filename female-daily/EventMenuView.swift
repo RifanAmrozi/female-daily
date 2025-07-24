@@ -114,7 +114,7 @@ struct EventMenuView: View {
                             TiketSayaView(data: tiket, row: index + 1, selectedTab: $selectedTab)
                         }
                     } else if selectedTab == "tiketqr" {
-                        QRCodeView(qrString: "142352")
+                        QRCodeView(qrString: "A1BJXB281", selectedTab: $selectedTab)
                     }
                 }
                 .padding(24)
