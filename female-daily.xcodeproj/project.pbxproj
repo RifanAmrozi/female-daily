@@ -19,11 +19,22 @@
 		0447D8382E2F3D5700FEA895 /* Exceptions for "female-daily" folder in "female-daily" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				BackendModel.swift,
 				Info.plist,
 			);
 			target = 408BC0402E2DE16700DDFA90 /* female-daily */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		521114A32E3323B4003A0377 /* Exceptions for "female-daily" folder in "Copy Bundle Resources" phase from "female-daily" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 408BC03F2E2DE16700DDFA90 /* Resources */;
+			membershipExceptions = (
+				BackendModel.swift,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		0447D83B2E2F418600FEA895 /* Font-Asset */ = {
@@ -35,6 +46,7 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				0447D8382E2F3D5700FEA895 /* Exceptions for "female-daily" folder in "female-daily" target */,
+				521114A32E3323B4003A0377 /* Exceptions for "female-daily" folder in "Copy Bundle Resources" phase from "female-daily" target */,
 			);
 			path = "female-daily";
 			sourceTree = "<group>";
@@ -280,10 +292,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = XFZH4MQVN2;
+				DEVELOPMENT_TEAM = 3AN2L3D76F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "female-daily/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera access is required to scan QR codes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -310,10 +323,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = XFZH4MQVN2;
+				DEVELOPMENT_TEAM = 3AN2L3D76F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "female-daily/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera access is required to scan QR codes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

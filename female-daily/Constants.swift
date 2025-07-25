@@ -22,4 +22,20 @@ struct Constants {
     static let PrimaryAccentPrimary700: Color = Color(red: 0.75, green: 0.09, blue: 0.37)
     static let GreyscaleGrey500: Color = Color(red: 0.39, green: 0.42, blue: 0.45)
     static let PrimarySecondary400: Color = Color(red: 0.96, green: 0.46, blue: 0.53)
+    
+    struct API{
+        static let baseURL: String="http://10.60.59.97:8080/api/v1"
+        static let tempURL: String="http://192.168.110.244:8080/api/v1"
+    }
+    
+    struct Ticket{
+        static let id: String="A1BJXB281"
+    }
+    struct Brand {
+        static let all: [Int: String] = [
+            1: "Wardah",
+            2: "Emina",
+            3: "Kahf"
+        ]
+    }
 }
