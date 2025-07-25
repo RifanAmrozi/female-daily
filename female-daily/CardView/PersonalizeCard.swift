@@ -10,10 +10,12 @@ import SwiftUI
 struct PersonalizeCard: View {
     let image: String
     let caption: String
+    let isSelected: Bool
+    let onTap: () -> Void
     
     var body: some View {
         ZStack(alignment: .topLeading) {
-            Image("bgcardpers")
+            Image(isSelected ? "bgcardpers-selected" : "bgcardpers-unselected")
                 .resizable()
                 .frame(width: 160, height: 160)
     
@@ -42,17 +44,41 @@ struct PersonalizeCard: View {
               .padding(.bottom, 6)
               .padding(.top, 135)
             
-            Image("checkboxpers")
-                .frame(width: 27.32529, height: 27.32246, alignment: .center)
-                .cornerRadius(8)
-                .padding(8)
+            Button(action: {
+                            onTap()
+                        }) {
+                            Image(isSelected ? "checkbox-selected" : "checkbox-unselected")
+                                .resizable()
+                                .frame(width: 27.32529, height: 27.32246, alignment: .center)
+                                .cornerRadius(8)
+                        }
+                        .padding(8)
         }
         .frame(width: 160, height: 160)
     }
 }
 
+//#Preview {
+//    PersonalizeCard(image: "haircare", caption: "Hair Care", isSelected: true , onTap: { print("Card Tapped") })
+//        .padding()
+//        .background(Color.black.opacity(0.2))
+//}
+
 #Preview {
-    PersonalizeCard(image: "haircare", caption: "Hair Care")
-        .padding()
-        .background(Color.black.opacity(0.2))
+    struct PreviewWrapper: View {
+        @State private var selected = false
+        
+        var body: some View {
+            PersonalizeCard(
+                image: "haircare",
+                caption: "Hair Care",
+                isSelected: selected,
+                onTap: {
+                    selected.toggle()
+                }
+            )
+        }
+    }
+    
+    return PreviewWrapper()
 }
