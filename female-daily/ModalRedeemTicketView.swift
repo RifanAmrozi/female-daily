@@ -29,15 +29,18 @@ struct CustomModalView: View {
                 .foregroundColor(Constants.PrimarySecondary700)
                 .frame(maxWidth: .infinity, alignment: .top)
             
-            HStack(alignment: .center, spacing: 10) {
-                Text("Info Acara")
-                    .font(
-                        Font.custom("Montserrat", size: 15)
-                            .weight(.bold)
-                    )
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(Constants.BackgroundColor)
+            NavigationLink(destination: EventDetailsView()) {
+                HStack(alignment: .center, spacing: 10) {
+                    Text("Info Acara")
+                        .font(
+                            Font.custom("Montserrat", size: 15)
+                                .weight(.bold)
+                        )
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(Constants.BackgroundColor)
+                }
             }
+
             .padding(.horizontal, 10)
             .padding(.vertical, 16)
             .frame(maxWidth: .infinity, alignment: .center)

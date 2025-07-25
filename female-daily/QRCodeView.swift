@@ -1,4 +1,5 @@
 import SwiftUI
+import AVFoundation
 import CoreImage.CIFilterBuiltins
 
 struct QRCodeView: View {
@@ -81,4 +82,16 @@ struct QRCodeGenerator {
         }
         return nil
     }
+}
+
+struct QRScannerView: UIViewControllerRepresentable {
+    var completion: (String) -> Void
+
+    func makeUIViewController(context: Context) -> ScannerViewController {
+        let controller = ScannerViewController()
+        controller.completion = completion
+        return controller
+    }
+
+    func updateUIViewController(_ uiViewController: ScannerViewController, context: Context) {}
 }
