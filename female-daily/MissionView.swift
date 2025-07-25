@@ -9,7 +9,14 @@ import SwiftUI
 
 struct MissionView: View {
     var body: some View {
-        Text("Hello, Mission!")
+        NavigationStack {
+            VStack {
+                Spacer()
+                Text("Hello, Mission!")
+                Spacer()
+            }
+            .navigationTitle("Mission")
+        }
     }
 }
 

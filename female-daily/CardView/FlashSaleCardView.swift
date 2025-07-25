@@ -33,14 +33,14 @@ struct FlashSaleCardView: View {
                         )
                         .multilineTextAlignment(.center)
                         .foregroundColor(.black)
-                        .frame(maxWidth: .infinity, maxHeight: 18, alignment: .top)
+                        .frame(maxWidth: .infinity, alignment: .top)
                     
                     // Caption
                     Text(flashsaletime)
                         .font(Font.custom("Montserrat", size: 12))
                         .multilineTextAlignment(.center)
                         .foregroundColor(.black)
-                        .frame(maxWidth: .infinity, maxHeight: 18, alignment: .center)
+                        .frame(maxWidth: .infinity, alignment: .center)
                 }
             }
             .padding(0)
@@ -55,7 +55,7 @@ struct FlashSaleCardView: View {
                   .foregroundColor(Constants.PrimaryAccentPrimary700)
             }
             .padding(8)
-            .frame(height: 34, alignment: .leading)
+            .frame(maxWidth: .infinity, minHeight: 34, maxHeight: 34, alignment: .center)
             .background(Constants.BackgroundColor)
             .cornerRadius(8)
             .overlay(
@@ -67,7 +67,7 @@ struct FlashSaleCardView: View {
         .padding(8)
         .background(.white)
         .cornerRadius(8)
-        .frame(width: 120, height: 182)
+        .frame(width: 140, height: 212)
         .overlay(
           RoundedRectangle(cornerRadius: 8)
             .inset(by: -0.1)

@@ -21,4 +21,5 @@ struct Constants {
     static let PrimaryAccentPrimary600: Color = Color(red: 0.86, green: 0.15, blue: 0.47)
     static let PrimaryAccentPrimary700: Color = Color(red: 0.75, green: 0.09, blue: 0.37)
     static let GreyscaleGrey500: Color = Color(red: 0.39, green: 0.42, blue: 0.45)
+    static let PrimarySecondary400: Color = Color(red: 0.96, green: 0.46, blue: 0.53)
 }

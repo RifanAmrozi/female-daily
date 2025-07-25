@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EventMenuView: View {
-    @State private var selectedTab: String = "tiketsaya"
+    @State private var selectedTab: String = "pesantiket"
     @Namespace private var underlineAnimation
     var title: String {
         switch selectedTab {
