@@ -108,12 +108,9 @@ struct PersonalizeView: View {
                     .opacity(selectedCategories.isEmpty ? 0.7 : 1.0)
             }
             .disabled(selectedCategories.isEmpty)
-            
-            NavigationLink(
-                destination: MainTabView(),
-                isActive: $navigateToMission,
-                label: { EmptyView() }
-            )
+            .navigationDestination(isPresented: $navigateToMission) {
+                MainTabView()
+            }
         }
     }
 }
