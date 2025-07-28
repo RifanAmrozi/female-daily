@@ -15,13 +15,14 @@ struct MainTabView: View {
     }
     
     var body: some View {
+        NavigationStack {
             ZStack(alignment: .bottom) {
                 Group {
                     switch selectedTab {
                     case .event:
                         EventDetailsView()
                     case .mission:
-                        MissionView()
+                        MissionMapView()
                     }
                 }
                 CustomTabBar(selectedTab: $selectedTab)
@@ -30,7 +31,8 @@ struct MainTabView: View {
             .ignoresSafeArea(.keyboard, edges: .bottom)
             .navigationBarBackButtonHidden(true)
             .gesture(DragGesture())
-//            .navigationBarHidden(true)
+            //            .navigationBarHidden(true)
+        }
     }
 }
 

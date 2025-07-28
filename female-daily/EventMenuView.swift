@@ -22,7 +22,7 @@ struct EventMenuView: View {
     }
     
     var body: some View {
-        NavigationStack{
+        NavigationStack {
             VStack(spacing:0) {
                 HStack(alignment: .center) {
                     // Space Between
@@ -43,6 +43,7 @@ struct EventMenuView: View {
                 .padding(.vertical, 16)
                 .frame(maxWidth: .infinity, minHeight: 54, maxHeight: 54, alignment: .center)
                 .background(Constants.BackgroundColor)
+                
                 VStack {
                     HStack(spacing: 0) {
                         Button(action: {
@@ -83,23 +84,22 @@ struct EventMenuView: View {
                             .padding(.vertical, 0)
                             .frame(maxWidth: .infinity, minHeight: 48, alignment: .center)
                         }
-                        
-                        .frame(maxWidth: .infinity, minHeight: 48)
-                        
-                        HStack {
-                            if selectedTab == "tiketsaya" {
-                                Spacer()
-                            }
-                            Rectangle()
-                                .fill(Constants.PrimaryAccentPrimary600)
-                                .frame(width: 196.5, height: 2)
-                                .matchedGeometryEffect(id: "underline", in: underlineAnimation)
-                            if selectedTab == "pesantiket" {
-                                Spacer()
-                            }
-                        }
-                        .animation(.easeInOut(duration: 0.25), value: selectedTab)
                     }
+                    .frame(maxWidth: .infinity, minHeight: 48)
+                    
+                    HStack {
+                        if selectedTab == "tiketsaya" {
+                            Spacer()
+                        }
+                        Rectangle()
+                            .fill(Constants.PrimaryAccentPrimary600)
+                            .frame(width: 196.5, height: 2)
+                            .matchedGeometryEffect(id: "underline", in: underlineAnimation)
+                        if selectedTab == "pesantiket" {
+                            Spacer()
+                        }
+                    }
+                    .animation(.easeInOut(duration: 0.25), value: selectedTab)
                 }
                 
                 ScrollView {
@@ -115,7 +115,7 @@ struct EventMenuView: View {
                                 TiketSayaView(data: tiket, row: index + 1, selectedTab: $selectedTab)
                             }
                         } else if selectedTab == "tiketqr" {
-                            QRCodeView(qrString:Constants.Ticket.id, selectedTab: $selectedTab)
+                            QRCodeView(qrString: Constants.Ticket.id, selectedTab: $selectedTab)
                         }
                     }
                     .padding(24)
