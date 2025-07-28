@@ -48,7 +48,7 @@ struct ScanQRView: View {
                     print(selectedPage)
                     selectedPage = "brand-detail"
                     print(selectedPage)
-                    presentationMode.wrappedValue.dismiss()
+//                    presentationMode.wrappedValue.dismiss()
                 }
                 
                 

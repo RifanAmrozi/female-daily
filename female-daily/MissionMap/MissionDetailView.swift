@@ -117,6 +117,7 @@ struct MissionDetailView: View {
                 .padding(.trailing, 24)
             }
             .padding(.leading, 24)
+            .padding(.bottom, 16)
             
             NavigationLink(destination: ScanQRView()) {
                 HStack(alignment: .center) {
