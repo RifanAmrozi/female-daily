@@ -5,6 +5,7 @@
 //  Created by Rif'an Amrozi on 25/07/25.
 //
 
+import Foundation
 
 struct Mission: Decodable {
     let id: Int

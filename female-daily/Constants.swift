@@ -22,11 +22,14 @@ struct Constants {
     static let PrimaryAccentPrimary700: Color = Color(red: 0.75, green: 0.09, blue: 0.37)
     static let GreyscaleGrey500: Color = Color(red: 0.39, green: 0.42, blue: 0.45)
     static let PrimarySecondary400: Color = Color(red: 0.96, green: 0.46, blue: 0.53)
+    static let GreyscaleGrey700: Color = Color(red: 0.29, green: 0.31, blue: 0.33)
+    static let GreyscaleGrey900: Color = Color(red: 0.22, green: 0.23, blue: 0.25)
     static let PrimaryAccentPrimary100: Color = Color(red: 0.98, green: 0.91, blue: 0.95)
+    static let PrimaryAccentPrimary950: Color = Color(red: 0.32, green: 0.02, blue: 0.14)
     static let PrimaryAccentPrimary200: Color = Color(red: 0.98, green: 0.81, blue: 0.91)
-    
+
     struct API{
-        static let baseURL: String="http://10.60.59.97:8080/api/v1"
+        static let baseURL: String="http://10.60.61.112:8080/api/v1"
         static let tempURL: String="http://192.168.110.244:8080/api/v1"
     }
     

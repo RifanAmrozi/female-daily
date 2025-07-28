@@ -29,7 +29,7 @@ struct CustomModalView: View {
                 .foregroundColor(Constants.PrimarySecondary700)
                 .frame(maxWidth: .infinity, alignment: .top)
             
-            NavigationLink(destination: EventDetailsView()) {
+            NavigationLink(destination: PersonalizeView()) {
                 HStack(alignment: .center, spacing: 10) {
                     Text("Info Acara")
                         .font(
